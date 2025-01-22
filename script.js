@@ -2,8 +2,7 @@
 const buyNowButton = document.getElementById('buy-now-button');
 buyNowButton.addEventListener('click', () => {
   document.getElementById('siuuu-sound').play();
-  alert('Redirecting to PancakeSwap...');
-  window.open('https://pancakeswap.finance/', '_blank'); // Replace with the correct link
+  window.open('https://jup.ag/onboard/', '_blank'); // Replace with the correct link
 });
 
 // FAQ Toggle Functionality
@@ -136,6 +135,5 @@ ctaButton.addEventListener('click', () => {
   siuuuSound.play();
 
   // Redirect to PancakeSwap or your desired link
-  alert('Redirecting to PancakeSwap...');
-  window.open('https://pancakeswap.finance/', '_blank'); // Replace with the correct link
+  window.open('https://jup.ag/onboard/', '_blank'); // Replace with the correct link
 });
