@@ -2,7 +2,8 @@
 const buyNowButton = document.getElementById('buy-now-button');
 buyNowButton.addEventListener('click', () => {
   document.getElementById('siuuu-sound').play();
-  window.open('https://jup.ag/onboard/', '_blank'); // Replace with the correct link
+  alert('Redirecting to PancakeSwap...');
+  window.open('https://pancakeswap.finance/', '_blank'); // Replace with the correct link
 });
 
 // FAQ Toggle Functionality
@@ -135,5 +136,67 @@ ctaButton.addEventListener('click', () => {
   siuuuSound.play();
 
   // Redirect to PancakeSwap or your desired link
-  window.open('https://jup.ag/onboard/', '_blank'); // Replace with the correct link
+  alert('Redirecting to PancakeSwap...');
+  window.open('https://pancakeswap.finance/', '_blank'); // Replace with the correct link
 });
+
+// Redirect to Cristiano Ronaldo's career achievements page on Wikipedia
+document.getElementById('easter-egg-button').addEventListener('click', () => {
+  window.open('https://en.wikipedia.org/wiki/List_of_career_achievements_by_Cristiano_Ronaldo', '_blank');
+});
+
+
+// Array of fun facts about Cristiano Ronaldo
+const triviaFacts = [
+  "Did you know? Cristiano Ronaldo has scored over 900 career goals!",
+  "Cristiano Ronaldo has won 5 Ballon d'Or awards!",
+  "Ronaldo is the all-time top scorer in the UEFA Champions League!",
+  "He has scored a hat-trick in the World Cup, Euros, and Champions League!",
+  "Ronaldo is the first player to score in 5 different World Cups!",
+];
+
+// Track the user's scroll position
+let lastScrollPosition = window.scrollY;
+let popupTimeout;
+
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+window.addEventListener('scroll', debounce(() => {
+  const button = document.getElementById('easter-egg-button');
+  const popup = document.getElementById('easter-egg-popup');
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+
+  if (scrollPosition >= pageHeight - 50) {
+    button.classList.add('visible');
+  } else {
+    button.classList.remove('visible');
+  }
+
+  const currentScrollPosition = window.scrollY;
+  if (currentScrollPosition < lastScrollPosition - 50) {
+    popup.classList.remove('visible');
+    clearTimeout(popupTimeout);
+  }
+
+  lastScrollPosition = currentScrollPosition;
+}, 100)); // Adjust the debounce time as needed
+// Show a random trivia fact when the button is clicked
+document.getElementById('easter-egg-button').addEventListener('click', () => {
+  const randomFact = triviaFacts[Math.floor(Math.random() * triviaFacts.length)];
+  document.getElementById('trivia-text').textContent = randomFact;
+  const popup = document.getElementById('easter-egg-popup');
+  popup.classList.add('visible');
+
+  // Automatically hide the popup after 10 seconds
+  popupTimeout = setTimeout(() => {
+    popup.classList.remove('visible');
+  }, 10000); // 10 seconds
+});
+
