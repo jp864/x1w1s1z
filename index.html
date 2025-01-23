@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://apis.google.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:5000;">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CR7 Memecoin - The SIUUU Revolution. Join the meme movement and own a piece of history.">
@@ -31,12 +33,12 @@
    <section id="how-to-buy">
     <h2>How to Buy $URCR7</h2>
     <ol>
-  <li>Install the Phantom or Solflare extension in your browser and set up the wallet.</li>
-  <li>Connect your wallet to the Jupiter website at https://jup.ag/onboard.</li>
-  <li>Buy Solana (SOL) and transfer it to your connected wallet.</li>
-  <li>Use the swap feature to convert SOL to $URCR7 tokens.</li>
-  <li>Confirm the transaction and check your wallet for the $URCR7 tokens.</li>
-</ol>
+      <li>Install the Phantom or Solflare extension in your browser and set up the wallet.</li>
+      <li>Connect your wallet to the Jupiter website at https://jup.ag/onboard.</li>
+      <li>Buy Solana (SOL) and transfer it to your connected wallet.</li>
+      <li>Use the swap feature to convert SOL to $URCR7 tokens.</li>
+      <li>Confirm the transaction and check your wallet for the $URCR7 tokens.</li>
+    </ol>
     <button id="buy-now-button" class="cta-button">Buy Now</button>
   </section>
 
@@ -86,7 +88,6 @@
 <!-- Global Community Section -->
 <section id="global-community">
   <h2>Global Community</h2>
-  <p>Join the CR7 Memecoin movement from anywhere in the world! Click on your country’s flag to represent your community.</p>
   <div class="country-grid">
     <div class="country-card" data-country="Portugal" data-bg="assets/backgrounds/portugal-bg.jpg">
       <img src="assets/flags/portugal.png" alt="Portugal Flag">
@@ -106,6 +107,10 @@
     </div>
     <!-- Add more countries as needed -->
   </div>
+    <!-- Add the note here -->
+    <p class="flag-note">
+      <em>More flags coming soon! Tag us on X with the flag from your country that you want to see added!</em>
+    </p>
   <div id="country-list">
     <h3>Countries Represented</h3>
     <ul id="country-names">
@@ -126,6 +131,11 @@
     <button id="buy-siuuu" class="cta-button">Buy $URCR7 Now</button>
   </div>
 </section>
+
+
+
+      
+
 <!-- FAQ Section -->
 <section id="faq">
     <h2>Frequently Asked Questions</h2>
@@ -144,7 +154,7 @@
         <span class="arrow">▼</span>
       </div>
       <div class="faq-answer">
-        <p>The official contract address is <strong>[AaBEkcrX1eybF4xDgLcfKQGXg2taq9J7wm4UCo5xdW8j]</strong>, and the symbol is <strong>$URCR7</strong>.</p>
+        <p>The official contract address is <strong>[TO BE REALEASED...]</strong>, and the symbol is <strong>$URCR7</strong>.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -153,7 +163,7 @@
         <span class="arrow">▼</span>
       </div>
       <div class="faq-answer">
-        <p>You can buy $URCR7 on Phantom using Solana (SOL). Follow the steps in the "How to Buy" section above.</p>
+        <p>You can buy $URCR7 on Phantom/Solfare using Solana (SOL). Follow the steps in the "How to Buy" section above.</p>
       </div>
     </div>
     <div class="faq-item">
@@ -180,7 +190,7 @@
         <span class="arrow">▼</span>
       </div>
       <div class="faq-answer">
-        <p>CR7 Memecoin is built on the Solana Chain (SOL).</p>
+        <p>CR7 Memecoin is built on the Solana (SOL).</p>
       </div>
     </div>
     <div class="faq-item">
@@ -242,22 +252,27 @@
 
 
 
-  
 
-<!-- Footer Section -->
+
 <footer>
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="https://x.com/cr7coin_onsol" target="_blank">Twitter</a>
-        <a href="https://t.me/urcr7coin" target="_blank">Telegram</a>
-      </div>
-      <p class="footer-disclaimer">
-        &copy; 2025 CR7 Memecoin. All Rights Reserved.<br>
-        $URCR7 is a memecoin with no intrinsic value. Please do your own research.
-      </p>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://x.com/cr7coin_onsol" target="_blank">Twitter</a>
+      <a href="https://t.me/urcr7coin" target="_blank">Telegram</a>
     </div>
-  </footer>
-
+    <p class="footer-disclaimer">
+      &copy; 2025 CR7 Memecoin. All Rights Reserved.<br>
+      $URCR7 is a memecoin with no intrinsic value. Please do your own research.
+    </p>
+    <!-- Easter Egg Button -->
+    <button id="easter-egg-button" class="easter-egg-button">?</button>
+    <!-- Easter Egg Popup -->
+   <!-- Easter Egg Popup -->
+<div id="easter-egg-popup" class="easter-egg-popup">
+  <p id="trivia-text">Cristiano Ronaldo has won 5 Ballon d'Or awards!</p>
+</div>
+</footer>
+   
   <script src="script.js"></script>
 </body>
 </html>
